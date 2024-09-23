@@ -17,7 +17,7 @@ int main()
         std::cerr << "Error opening file." << std::endl;
         return 1;
     }
-    
+
 
     // Vector to store student data
     std::vector<STUDENT_DATA> students;
@@ -37,6 +37,16 @@ int main()
             students.push_back(student); 
         }
     }
+
+    // Print student data in the debug 
+#ifdef _DEBUG
+    std::cout << "Student Information:" << std::endl;
+    for (const auto& student : students)
+
+    {
+        std::cout << "First Name: " << student.firstName << ", Last Name: " << student.lastName << std::endl;
+    }
+#endif
     // Close the file
     inputFile.close();
     return 1;
