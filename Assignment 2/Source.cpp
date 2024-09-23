@@ -17,7 +17,7 @@ int main()
         std::cerr << "Error opening file." << std::endl;
         return 1;
     }
-    
+
 
     // Vector to store student data
     std::vector<STUDENT_DATA> students;
