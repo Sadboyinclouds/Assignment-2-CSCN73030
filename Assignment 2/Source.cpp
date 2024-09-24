@@ -37,12 +37,12 @@ int main()
             continue;
         }
 
-        // Find the position of the first comma
+        
         size_t commaPos1 = line.find(',');
         if (commaPos1 != std::string::npos) {
             STUDENT_DATA student;
 
-            // In pre-release mode, find the second comma for the email
+            
             size_t commaPos2 = line.find(',', commaPos1 + 1);
             if (commaPos2 != std::string::npos) {
                 // Extract last name
@@ -53,10 +53,10 @@ int main()
                 student.email = line.substr(commaPos2 + 1);
             }
             else {
-                // If there’s no second comma, we can handle it accordingly
+                
                 student.lastName = line.substr(0, commaPos1);
                 student.firstName = line.substr(commaPos1 + 1);
-                student.email = ""; // No email available
+                student.email = ""; 
             }
 
             students.push_back(student);
